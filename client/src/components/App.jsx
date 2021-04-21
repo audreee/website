@@ -1,9 +1,16 @@
 import React from 'react';
+import Navbar from './Navbar.jsx';
+import Welcome from './Welcome.jsx'
 
 class App extends React.Component {
   render() {
     return(
-      <h1>Hello, world!</h1>
+      <div className="app-container">
+      <div className="section-container">
+        <Welcome />
+      </div>
+        <Navbar />
+      </div>
     )
   }
 }
