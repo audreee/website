@@ -8,7 +8,7 @@ let Welcome = () => {
         <div className="welcome-right"></div>
       </div>
       <div className="welcome-overlay">
-        <div className="welcome-text">
+        <div className="welcome-text center">
           <div className="slideFromLeft">
             <h1>hello</h1>
           </div>
