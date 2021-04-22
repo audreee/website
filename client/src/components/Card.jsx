@@ -15,18 +15,15 @@ class Card extends React.Component {
 
   render() {
     return (
-      <div className="card" onMouseEnter={this.handleMouseMove} onMouseLeave={this.handleMouseMove}>
-        <div className="card-inner">
-          {!this.state.isFlipped && <div className="card-front">
-            <img src={this.props.img} alt="Screenshot" className="card-img" />
-          </div>}
-          {this.state.isFlipped && <div className="card-back">
-            <h1>{this.props.title}</h1>
-            <p>{this.props.description}</p>
-            <button><a href={this.props.link}>See More</a></button>
-          </div>}
-        </div>
+     <div className="card">
+      <div className="card-img" style={{backgroundImage: `url("${this.props.img}")`}}>
       </div>
+      <div className="card-content">
+        <h5 className="card-title">{this.props.title}</h5>
+        <p className="card-description">{this.props.description}</p>
+        <button className="card-button"><a href={this.props.link}>See More</a></button>
+      </div>
+     </div>
     )
   }
 }

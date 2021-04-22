@@ -284,56 +284,69 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #90ADC6;
+  background-color: #F8EFE4;
   height: 100vh;
   text-align: center;
   width: 100vw;
 }
 
-.card-img {
-  width: 500px;
-  height: 318px;
-}
-
 .card {
-  width: 500px;
-  height: 318px;
-  background-color: transparent;
-  perspective: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 280px;
+  height: 500px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
 }
 
-.card-inner {
-  position: relative;
+.card-content {
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card-img {
   width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
+  height: 150px;
+  border-radius: 10px 10px 0 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.card:hover .card-inner {
-  transform: rotateY(180deg);
+.card-title {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+  color: #282120;
 }
 
-
-/* Position the front and back side */
-.card-front, .card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
+.card-description {
+  color: #282120;
+  margin: 0 1.5em;
 }
 
-/* Style the front side (fallback if image is missing) */
-.card-front {
-  background-color: #bbb;
-  color: black;
+.card-button {
+  background-color: #FAD02C;
+  border: none;
+  border-radius: 10px;
+  padding: 1em;
+  width: 66%;
+  margin-top: 1.5em;
 }
 
-/* Style the back side */
-.card-back {
-  background-color: dodgerblue;
-  color: white;
-  transform: rotateY(180deg);
+.card-button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.card-button > a {
+  font-size: 1.2em;
+  font-family: inherit;
+  color: #282120;
+  text-decoration: none;
+  padding-bottom: 0.5em;
 }
