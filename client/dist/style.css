@@ -4,7 +4,7 @@ yellow: #FAD02C
 cream: #F8EFE4
 rose: #E6C2BF */
 
-body {
+body, h1, h6 {
   margin: 0;
 }
 
@@ -96,8 +96,12 @@ a:hover {
 
 .welcome-text {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
   font-family: 'Didact Gothic', sans-serif;
-  font-size: 7em;
+  font-size: 9em;
+  letter-spacing: 3px;
 }
 
 .period {
@@ -118,19 +122,46 @@ a:hover {
 }
 
 .slideFromRight {
-  -webkit-animation: slideIn 2s forwards;
-  animation: slideIn 2s forwards;
+  -webkit-animation: slideFromRight 2s forwards;
+  animation: slideFromRight 2s forwards;
 }
-@-webkit-keyframes slideIn {
+@-webkit-keyframes slideFromRight {
   0% {
     transform: translateX(300px);
     opacity: 0;
   }
-  /* 50% {
-    opacity: 0.3;
-  } */
   100% {
     transform: translateX(0);
+    opacity: 1.0;
+  }
+}
+
+.slideFromLeft {
+  -webkit-animation: slideFromLeft 2s forwards;
+  animation: slideFromLeft 2s forwards;
+}
+@-webkit-keyframes slideFromLeft {
+  0% {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1.0;
+  }
+}
+
+.slideFromTop {
+  -webkit-animation: slideFromTop 2s forwards;
+  animation: slideFromTop 2s forwards;
+}
+@-webkit-keyframes slideFromTop {
+  0% {
+    top: -100%;
+    opacity: 0;
+  }
+  100% {
+    top: 100%;
     opacity: 1.0;
   }
 }
