@@ -1,40 +1,41 @@
 const path = require('path');
 
 module.exports = {
-  entry: './client/src/index.jsx',
+  entry: "./client/src/index.jsx",
   output: {
-    path: path.join(__dirname, './client/dist'),
-    filename: 'bundle.js',
+    path: path.resolve(__dirname, "client/dist/"),
+    filename: "bundle.js",
   },
-  mode: 'development',
   module: {
     rules: [
       {
-        test: /\.(mjs|js|jsx)$/,
+        test: /\.m?js|jsx$/,
         exclude: /(node_modules)/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react',  {
-               plugins: ['@babel/plugin-proposal-class-properties'],
-              },
-            ],
+            presets: ["@babel/preset-env", "@babel/preset-react"],
           },
         },
       },
       {
-        test: /\.css$/,
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/,
         use: [
-          { loader: 'style-loader' },
           {
-            loader: 'css-loader',
+            loader: 'file-loader',
             options: {
-              modules: true,
-            },
-          },
+              name: '[name].[contenthash].[ext]',
+              outputPath: 'static/img',
+              esModule: false,
+            }
+          }
         ],
       },
     ],
   },
-  watch: true
+  mode: "development",
 };

@@ -278,3 +278,19 @@ hr {
   width: 75%;
   text-align: center;
 }
+
+.projects-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #90ADC6;
+  height: 100vh;
+  text-align: center;
+  width: 100vw;
+}
+
+.card-img {
+  width: 200px;
+  height: 200px;
+}
