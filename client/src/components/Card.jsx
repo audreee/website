@@ -6,11 +6,16 @@ class Card extends React.Component {
     this.state = {
       isFlipped: false
     }
+    this.handleMouseMove = this.handleMouseMove.bind(this);
+  }
+
+  handleMouseMove() {
+    this.setState({ isFlipped: !this.state.isFlipped })
   }
 
   render() {
     return (
-      <div className="card">
+      <div className="card" onMouseEnter={this.handleMouseMove} onMouseLeave={this.handleMouseMove}>
         <div className="card-inner">
           {!this.state.isFlipped && <div className="card-front">
             <img src={this.props.img} alt="Screenshot" className="card-img" />
