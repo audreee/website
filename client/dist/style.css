@@ -95,5 +95,42 @@ a:hover {
 }
 
 .welcome-text {
-  font-size: 10em;
+  display: flex;
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 7em;
+}
+
+.period {
+  color: #90ADC6;
+}
+
+.fadeIn {
+  animation-duration: 4s;
+  -webkit-animation: fadeIn 4s forwards;
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.slideFromRight {
+  -webkit-animation: slideIn 2s forwards;
+  animation: slideIn 2s forwards;
+}
+@-webkit-keyframes slideIn {
+  0% {
+    transform: translateX(300px);
+    opacity: 0;
+  }
+  /* 50% {
+    opacity: 0.3;
+  } */
+  100% {
+    transform: translateX(0);
+    opacity: 1.0;
+  }
 }

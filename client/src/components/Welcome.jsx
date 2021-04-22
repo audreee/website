@@ -8,8 +8,9 @@ let Welcome = () => {
         <div className="welcome-right"></div>
       </div>
       <div className="welcome-overlay">
-        <div className="welcome-text">
-          <h1>Hi.</h1>
+        <div className="welcome-text fadeIn">
+          <h1>hello</h1>
+          <h1 className="period slideFromRight">.</h1>
         </div>
       </div>
     </div>
