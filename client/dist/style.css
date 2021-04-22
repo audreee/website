@@ -183,7 +183,7 @@ body, h1, h6, h5, p {
 }
 
 .about-wrapper {
-  background-color: #90ADC6;
+  background-color: #282120;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -194,9 +194,9 @@ body, h1, h6, h5, p {
 .about-text-background {
   left: 0;
   background-color: transparent;
-  border-top: 2px solid #F8EFE4;
-  border-bottom: 2px solid #F8EFE4;
-  border-right: 2px solid #F8EFE4;
+  border-top: 2px solid #FAD02C;
+  border-bottom: 2px solid #FAD02C;
+  border-right: 2px solid #FAD02C;
   width: 60vw;
   padding: 3em;
 }
@@ -216,8 +216,8 @@ body, h1, h6, h5, p {
 }
 
 .about-text p {
-  color: #282120;
-  font-size: 2em;
+  color: #F8EFE4;
+  font-size: 1.5em;
   padding-top: 0.5em;
 }
 
