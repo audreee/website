@@ -15,7 +15,7 @@ body, h1, h6, h5, p {
   margin: 0;
   padding: 0;
   font-family: 'Didact Gothic', Helvetica, Arial, sans-serif;
-  color: black;
+  color: #282120;
   font-size: 1em;
 }
 
@@ -224,4 +224,57 @@ body, h1, h6, h5, p {
 .about-text .yellow {
   color: #FAD02C;
   font-size: 3em;
+}
+
+.tech-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #282120;
+  height: 100vh;
+  text-align: center;
+  width: 100vw;
+}
+
+.tech-wrapper > h5 {
+  font-size: 2em;
+  margin-bottom: 2em;
+  color: #FAD02C;
+}
+
+.list-container {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  color: #F8EFE4;
+}
+
+.list-col {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+.list-col ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 1em;
+}
+
+.list-col li {
+  padding: 0.5em 0;
+  font-size: 1.2em;
+}
+
+.tech-title {
+  margin: 0 0 0.5em 0;
+  font-size: 1.5em;
+}
+
+hr {
+  border: 1px solid #F8EFE4;
+  color: #F8EFE4;
+  width: 75%;
+  text-align: center;
 }

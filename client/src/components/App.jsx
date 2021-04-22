@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './Navbar.jsx';
 import Welcome from './Welcome.jsx';
 import About from './About.jsx';
+import Tech from './Tech.jsx';
 
 class App extends React.Component {
   render() {
@@ -13,6 +14,9 @@ class App extends React.Component {
       </div>
       <div className="section-container">
         <About />
+      </div>
+      <div className="section-container">
+        <Tech />
       </div>
       </div>
     )
