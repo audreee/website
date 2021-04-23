@@ -12,10 +12,12 @@ class App extends React.Component {
     this.state = {
       aboutIsVisible: false,
       windowWidth: window.innerWidth,
-      windowHeight: window.innerHeight
+      windowHeight: window.innerHeight,
+      isMobile: true
     }
     this.updateScrollPos = this.updateScrollPos.bind(this);
     this.updateDimensions = this.updateDimensions.bind(this);
+    this.toggleMobile = this.toggleMobile.bind(this);
   }
 
   updateScrollPos() {
@@ -29,11 +31,19 @@ class App extends React.Component {
     this.setState({
       windowWidth: window.innerWidth,
       windowHeight: window.innerHeight
-    });
+    }, this.toggleMobile());
+  }
+
+  toggleMobile() {
+    if (this.state.windowWidth < 769) {
+      this.setState({ isMobile: true })
+    } else {
+      this.setState({ isMobile: false })
+    }
   }
 
   componentDidMount(){
-    // this.updateDimensions();
+    this.toggleMobile();
     window.addEventListener('resize', this.updateDimensions);
     window.addEventListener('scroll', this.updateScrollPos);
   }
@@ -46,12 +56,12 @@ class App extends React.Component {
   render() {
     return(
       <div className="app-container">
-        <Navbar windowWidth={this.state.windowWidth} />
+        <Navbar isMobile={this.state.isMobile} windowWidth={this.state.windowWidth} />
         <div className="section-container" id="welcome">
           <Welcome />
         </div>
         <div className="section-container" id="about">
-          <About aboutIsVisible={this.state.aboutIsVisible}/>
+          <About isMobile={this.state.isMobile} aboutIsVisible={this.state.aboutIsVisible}/>
         </div>
         <div className="section-container" id="tech">
           <Tech />

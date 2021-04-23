@@ -10,7 +10,7 @@ class Navbar extends React.Component {
       collapse: false
     }
     this.toggleCollapse = this.toggleCollapse.bind(this);
-    this.toggleMobile = this.toggleMobile.bind(this);
+    // this.toggleMobile = this.toggleMobile.bind(this);
     this.handleLinkClick = this.handleLinkClick.bind(this);
   }
 
@@ -19,27 +19,30 @@ class Navbar extends React.Component {
   }
 
   handleLinkClick(e) {
-    if (this.state.isMobile) {
+    if (this.props.isMobile) {
       this.setState({collapse: true})
     }
   }
 
-  toggleMobile() {
-    if (this.props.windowWidth < 769) {
-      this.setState({ isMobile: true, collapse: true })
-    } else {
-      this.setState({ isMobile: false, collapse: false})
-    }
-  }
+  // toggleMobile() {
+  //   if (this.props.windowWidth < 769) {
+  //     this.setState({ isMobile: true, collapse: true })
+  //   } else {
+  //     this.setState({ isMobile: false, collapse: false})
+  //   }
+  // }
 
-  componentDidUpdate(prevProps) {
-    if (prevProps.windowWidth !== this.props.windowWidth) {
-      this.toggleMobile();
-    }
-  }
+  // componentDidUpdate(prevProps) {
+  //   if (prevProps.isMobile !== this.props.isMobile) {
+  //     this.setState({ this.setState({ isMobile: this.props.isMobile })});
+  //   }
+  // }
 
   componentDidMount() {
-    this.toggleMobile();
+    // this.toggleMobile();
+    if (this.props.isMobile) {
+      this.setState({collapse: true})
+    }
   }
 
   renderLinks() {
@@ -59,10 +62,10 @@ class Navbar extends React.Component {
         <ul id="nav">
           <div className="nav-left">
             <li><a href="#" onClick={this.handleLinkClick}>Audree Steinberg</a></li>
-            {this.state.isMobile && !this.state.collapse && this.renderLinks()}
+            {this.props.isMobile && !this.state.collapse && this.renderLinks()}
           </div>
           <div className="nav-right">
-            {this.state.isMobile ?
+            {this.props.isMobile ?
               <div className="burger">
                 <FontAwesomeIcon icon={faBars} size="2x" onClick={this.toggleCollapse} style={{color: '#F8EFE4'}}/>
               </div>
