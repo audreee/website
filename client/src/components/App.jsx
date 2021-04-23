@@ -10,34 +10,43 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      aboutIsVisible: false
+      aboutIsVisible: false,
+      windowWidth: window.innerWidth,
+      windowHeight: window.innerHeight
     }
     this.updateScrollPos = this.updateScrollPos.bind(this);
+    this.updateDimensions = this.updateDimensions.bind(this);
   }
 
   updateScrollPos() {
-    // if (window.scrollY >= 790) {
-    //   this.setState({aboutIsVisible: true})
-    //   window.removeEventListener('scroll', this.updateScrollPos);
-    // }
     if (window.scrollY >= window.innerHeight) {
       this.setState({aboutIsVisible: true})
       window.removeEventListener('scroll', this.updateScrollPos);
     }
   }
 
+  updateDimensions() {
+    this.setState({
+      windowWidth: window.innerWidth,
+      windowHeight: window.innerHeight
+    });
+  }
+
   componentDidMount(){
+    // this.updateDimensions();
+    window.addEventListener('resize', this.updateDimensions);
     window.addEventListener('scroll', this.updateScrollPos);
   }
 
   componentWillUnmount(){
      window.removeEventListener('scroll', this.updateScrollPos);
+     window.removeEventListener('resize', this.updateDimensions);
   }
 
   render() {
     return(
       <div className="app-container">
-        <Navbar />
+        <Navbar windowWidth={this.state.windowWidth} />
         <div className="section-container" id="welcome">
           <Welcome />
         </div>

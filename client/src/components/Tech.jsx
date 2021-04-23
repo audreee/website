@@ -2,9 +2,9 @@ import React from 'react';
 
 let Tech = () => {
   return (
-    <div className="tech-wrapper">
+    <div className="flex-column tech-wrapper">
       <h5>TECHNOLOGIES</h5>
-      <div className="list-container">
+      <div className="flex-row list-container">
       <div className="list-col">
         <h4 className="tech-title">Front End</h4>
         <hr />
