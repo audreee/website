@@ -403,4 +403,5 @@ hr {
   height: 200px;
   width: 200px;
   margin: 1em 0;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
