@@ -281,8 +281,8 @@ hr {
 
 .projects-wrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
   background-color: #F8EFE4;
   height: 100vh;
