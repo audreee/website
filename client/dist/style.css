@@ -166,8 +166,8 @@ body, h1, h6, h5, p {
 }
 
 .slideFromLeft {
-  -webkit-animation: slideFromLeft 4s forwards;
-  animation: slideFromLeft 4s forwards;
+  -webkit-animation: slideFromLeft 3s forwards;
+  animation: slideFromLeft 3s forwards;
 }
 @-webkit-keyframes slideFromLeft {
   0% {
@@ -375,3 +375,32 @@ hr {
   padding-bottom: 0.5em;
 }
 
+.contact-wrapper {
+  background-color: #90ADC6;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-wrapper > h3 {
+  font-size: 2em;
+  margin: 0;
+  color: #F8EFE4;
+}
+
+.contact-wrapper > h5 {
+  font-size: 1.5em;
+  margin: 0;
+  color: #F8EFE4;
+  margin-bottom: 2em;
+}
+
+.contact-wrapper img {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  margin: 1em 0;
+}

@@ -5,7 +5,7 @@ let Navbar = () => {
         <div>
           <ul id="nav">
             <div className="nav-left">
-              <li><a href="#">Audree Steinberg</a></li>
+              <li><a href="#" className="active">Audree Steinberg</a></li>
             </div>
             <div className="nav-right">
               <li><a href="#about">About</a></li>

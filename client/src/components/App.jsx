@@ -4,6 +4,7 @@ import Welcome from './Welcome.jsx';
 import About from './About.jsx';
 import Tech from './Tech.jsx';
 import Projects from './Projects.jsx';
+import Contact from './Contact.jsx';
 
 class App extends React.Component {
   constructor() {
@@ -15,7 +16,11 @@ class App extends React.Component {
   }
 
   updateScrollPos() {
-    if (window.scrollY >= 790) {
+    // if (window.scrollY >= 790) {
+    //   this.setState({aboutIsVisible: true})
+    //   window.removeEventListener('scroll', this.updateScrollPos);
+    // }
+    if (window.scrollY >= window.innerHeight) {
       this.setState({aboutIsVisible: true})
       window.removeEventListener('scroll', this.updateScrollPos);
     }
@@ -44,6 +49,9 @@ class App extends React.Component {
         </div>
         <div className="section-container" id="projects">
           <Projects />
+        </div>
+        <div className="section-container" id="contact">
+          <Contact />
         </div>
       </div>
     )
