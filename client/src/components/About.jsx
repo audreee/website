@@ -2,7 +2,7 @@ import React from 'react';
 
 let About = ({aboutIsVisible, isMobile}) => {
   let renderContent = () => (
-    <div className={!isMobile && 'slideFromLeft'}>
+    <div className={!isMobile ? 'slideFromLeft' : null}>
       <div className="about-text-background">
         <div className="about-text">
           <h5>Audree Steinberg</h5>

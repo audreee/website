@@ -23,9 +23,9 @@ class Card extends React.Component {
       <div className="card-content">
         <h5 className="card-title">{this.props.title}</h5>
         <p className="card-description">{this.props.description}</p>
-        <div className="row">
-          <a href={this.props.repo}><FontAwesomeIcon icon={faGithub} size="2x" style={{color: '#90ADC6'}}/></a>
-          {this.props.video && <a href={this.props.video}><FontAwesomeIcon icon={faYoutube} size="2x" style={{color: '#FAD02C'}}/></a>}
+        <div className="row-icons">
+          <a href={this.props.repo} target="_blank"><FontAwesomeIcon icon={faGithub} size="2x" style={{color: '#90ADC6'}}/></a>
+          {this.props.video && <a target="_blank" href={this.props.video}><FontAwesomeIcon icon={faYoutube} size="2x" style={{color: '#FAD02C'}}/></a>}
         </div>
       </div>
      </div>
