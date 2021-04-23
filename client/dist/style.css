@@ -385,17 +385,23 @@ hr {
   align-items: center;
 }
 
-.contact-wrapper > h3 {
+.contact-title {
   font-size: 2em;
   margin: 0;
-  color: #F8EFE4;
+  color: #282120;
 }
 
-.contact-wrapper > h5 {
+.contact-text > h3 {
+  font-size: 2em;
+  margin: 0;
+  color: #282120;
+}
+
+.contact-text > h5 {
   font-size: 1.5em;
   margin: 0;
-  color: #F8EFE4;
-  margin-bottom: 2em;
+  color: #282120;
+  margin-bottom: 0.5em;
 }
 
 .contact-wrapper img {
@@ -404,4 +410,24 @@ hr {
   width: 200px;
   margin: 1em 0;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 75%;
+  width: 50%;
+  background-color: #F8EFE4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin-top: 1em;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
