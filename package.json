@@ -12,12 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/audreee/shop-local.git"
+    "url": "git+https://github.com/audreee/website.git"
   },
   "keywords": [],
   "author": "Audree Steinberg",
   "license": "ISC",
-  "homepage": "https://github.com/audreee/shop-local#readme",
+  "homepage": "https://github.com/audreee/website",
   "devDependencies": {
     "@babel/core": "^7.13.14",
     "@babel/preset-env": "^7.13.12",
@@ -39,5 +39,8 @@
     "@fortawesome/react-fontawesome": "^0.1.14",
     "file-loader": "^6.2.0",
     "html-loader": "^2.1.2"
+  },
+  "engines": {
+    "node": "14.x"
   }
 }
