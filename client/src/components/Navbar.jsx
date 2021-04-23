@@ -10,7 +10,6 @@ class Navbar extends React.Component {
       collapse: false
     }
     this.toggleCollapse = this.toggleCollapse.bind(this);
-    // this.toggleMobile = this.toggleMobile.bind(this);
     this.handleLinkClick = this.handleLinkClick.bind(this);
   }
 
@@ -24,14 +23,6 @@ class Navbar extends React.Component {
     }
   }
 
-  // toggleMobile() {
-  //   if (this.props.windowWidth < 769) {
-  //     this.setState({ isMobile: true, collapse: true })
-  //   } else {
-  //     this.setState({ isMobile: false, collapse: false})
-  //   }
-  // }
-
   componentDidUpdate(prevProps) {
     if (prevProps.isMobile !== this.props.isMobile) {
       this.handleLinkClick();
@@ -39,7 +30,6 @@ class Navbar extends React.Component {
   }
 
   componentDidMount() {
-    // this.toggleMobile();
     if (this.props.isMobile) {
       this.setState({collapse: true})
     }
@@ -77,8 +67,6 @@ class Navbar extends React.Component {
       </div>
     );
   }
-
 }
-
 
 export default Navbar;
