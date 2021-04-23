@@ -18,7 +18,7 @@ let Contact = () => {
         <div className="row-icons">
           <a href={'http://github.com/audreee'} target="_blank"><FontAwesomeIcon icon={faGithub} size="4x" style={{color: '#FAD02C'}}/></a>
           <a href={'http://linkedin.com/in/audreesteinberg'} target="_blank"><FontAwesomeIcon icon={faLinkedinIn} size="4x" style={{color: '#282120'}}/></a>
-          <a href={'mailto:audreecodes@gmail.com'} target="_blank"><FontAwesomeIcon icon={faEnvelope} size="4x" style={{color: '#90ADC6'}}/></a>
+          <a href={'mailto:audreesteinberg@gmail.com'} target="_blank"><FontAwesomeIcon icon={faEnvelope} size="4x" style={{color: '#90ADC6'}}/></a>
         </div>
       </div>
 
