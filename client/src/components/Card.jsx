@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faGithub, faYoutube} from '@fortawesome/free-brands-svg-icons';
 
 class Card extends React.Component {
   constructor() {
@@ -21,7 +23,10 @@ class Card extends React.Component {
       <div className="card-content">
         <h5 className="card-title">{this.props.title}</h5>
         <p className="card-description">{this.props.description}</p>
-        {this.state.hover && <button className="card-button"><a href={this.props.link}>See More</a></button>}
+        <div className="row">
+          <a href={this.props.repo}><FontAwesomeIcon icon={faGithub} size="2x" style={{color: '#90ADC6'}}/></a>
+          {this.props.video && <a href={this.props.video}><FontAwesomeIcon icon={faYoutube} size="2x" style={{color: '#FAD02C'}}/></a>}
+        </div>
       </div>
      </div>
     )
