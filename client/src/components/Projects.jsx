@@ -5,9 +5,12 @@ import Card from './Card.jsx';
 let Projects = () => {
   return (
     <div className="projects-wrapper">
-      {projectData.map((project, index) => (
-        <Card key={index} img={project.img} title={project.title} link={project.link} description={project.description} />
-      ))}
+      <h5>PROJECTS</h5>
+      <div className="card-container">
+        {projectData.map((project, index) => (
+          <Card key={index} img={project.img} title={project.title} link={project.link} description={project.description} />
+        ))}
+      </div>
     </div>
   )
 }

@@ -5,6 +5,10 @@ cream: #F8EFE4
 rose: #E6C2BF
 gray: #90ADC6 */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body, h1, h6, h5, p {
   margin: 0;
 }
@@ -211,8 +215,6 @@ body, h1, h6, h5, p {
 .about-text h5 {
   color: #F8EFE4;
   font-size: 4em;
-  /* padding: .2em; */
-  /* border-bottom: 2px solid #F8EFE4; */
 }
 
 .about-text p {
@@ -281,13 +283,26 @@ hr {
 
 .projects-wrapper {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   background-color: #F8EFE4;
   height: 100vh;
   text-align: center;
   width: 100vw;
+}
+
+.projects-wrapper > h5 {
+  font-size: 2em;
+  margin-bottom: 2em;
+  color: #282120;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%
 }
 
 .card {
@@ -350,3 +365,4 @@ hr {
   text-decoration: none;
   padding-bottom: 0.5em;
 }
+

@@ -10,16 +10,16 @@ class App extends React.Component {
     return(
       <div className="app-container">
         <Navbar />
-      <div className="section-container">
+      <div className="section-container" id="welcome">
         <Welcome />
       </div>
-      <div className="section-container">
+      <div className="section-container" id="about">
         <About />
       </div>
-      <div className="section-container">
+      <div className="section-container" id="tech">
         <Tech />
       </div>
-      <div className="section-container">
+      <div className="section-container" id="projects">
         <Projects />
       </div>
       </div>

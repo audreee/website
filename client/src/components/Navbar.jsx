@@ -8,10 +8,10 @@ let Navbar = () => {
               <li><a href="#">Audree Steinberg</a></li>
             </div>
             <div className="nav-right">
-              <li><a href="#">About</a></li>
-              <li><a href="#">Tech</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#tech">Tech</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
             </div>
           </ul>
         </div>
