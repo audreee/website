@@ -262,6 +262,7 @@ body, h1, h6, h5, p {
   .about-wrapper {
     justify-content: center;
     text-align: center;
+    margin: 0;
   }
   .about-text > h5 {
     font-size: 5em;
@@ -275,6 +276,8 @@ body, h1, h6, h5, p {
   }
   .about-text-background {
     border: none;
+    margin: 0;
+    width: 100vw;
   }
   .tech-wrapper {
     visibility: hidden;

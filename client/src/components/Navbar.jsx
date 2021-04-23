@@ -32,11 +32,11 @@ class Navbar extends React.Component {
   //   }
   // }
 
-  // componentDidUpdate(prevProps) {
-  //   if (prevProps.isMobile !== this.props.isMobile) {
-  //     this.setState({ this.setState({ isMobile: this.props.isMobile })});
-  //   }
-  // }
+  componentDidUpdate(prevProps) {
+    if (prevProps.isMobile !== this.props.isMobile) {
+      this.handleLinkClick();
+    }
+  }
 
   componentDidMount() {
     // this.toggleMobile();
