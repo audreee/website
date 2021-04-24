@@ -1,6 +1,6 @@
 import React from 'react';
 
-let Welcome = () => {
+let Welcome = ({isMobile}) => {
   return (
     <div className="welcome-wrapper">
       <div className="welcome-content">
@@ -9,14 +9,17 @@ let Welcome = () => {
       </div>
       <div className="welcome-overlay">
         <div className="welcome-text center">
-          <div className="slideFromLeft">
+          <div className={isMobile ? "fadeIn" : "slideFromLeft"}>
             <h1>hello</h1>
           </div>
-          <h1 className="period slideFromRight">.</h1>
-        </div>
+          <h1 className={`period ${isMobile ? 'fadeIn' : 'slideFromRight'}`}>.</h1>
+          </div>
       </div>
     </div>
   )
 }
 
 export default Welcome;
+
+
+

@@ -58,7 +58,7 @@ class App extends React.Component {
       <div className="app-container">
         <Navbar isMobile={this.state.isMobile} windowWidth={this.state.windowWidth} />
         <div className="section-container" id="welcome">
-          <Welcome />
+          <Welcome isMobile={this.state.isMobile}/>
         </div>
         <div className="section-container" id="about">
           <About isMobile={this.state.isMobile} aboutIsVisible={this.state.aboutIsVisible}/>

@@ -21,7 +21,7 @@ body, h1, h6, h5, p {
   width: 100vw;
   margin: 0;
   padding: 0;
-  font-family: 'Didact Gothic', Helvetica, Arial, sans-serif;
+  font-family: 'Didact Gothic', 'Helvetica', 'Arial', sans-serif;
   color: #282120;
   font-size: 1em;
 }
@@ -133,7 +133,7 @@ body, h1, h6, h5, p {
   flex-shrink: inherit;
   justify-content: center;
   align-items: baseline;
-  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Didact Gothic', 'Helvetica', sans-serif;
   font-size: 9vw;
   letter-spacing: 3px;
 }
@@ -441,10 +441,18 @@ hr {
     width: 100%;
     scroll-snap-align: none;
   }
+  .welcome-text {
+    font-size: 3em;
+    letter-spacing: 1px;
+  }
   .about-wrapper {
     justify-content: center;
     text-align: center;
     margin: 0;
+  }
+  .about-text {
+    margin: auto;
+    text-align: left;
   }
   .about-text > h5 {
     font-size: 5em;
@@ -454,11 +462,12 @@ hr {
   }
   .about-text > p{
     font-size: 3.5em;
-    padding-top: 2em;
+    margin-top: 2em;
   }
   .about-text-background {
     border: none;
     margin: 0;
+    padding: 0;
     width: 100vw;
   }
   .tech-wrapper {
