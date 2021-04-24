@@ -9,7 +9,7 @@
     "prod-build": "webpack",
     "dev-start": "nodemon server/index.js",
     "start": "node server/index.js",
-    "heroku-postbuild": "webpack -p"
+    "heroku-postbuild": "webpack"
   },
   "repository": {
     "type": "git",
